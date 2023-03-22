@@ -1,0 +1,5 @@
+{
+  "googlecloudtts": {
+    "description": "Create a service account tutorial:<ol><li>1.<a target='_blank' href='https://console.cloud.google.com/cloud-resource-manager'>Create new project</a></li><li>2.<a target='_blank' href='https://console.cloud.google.com/billing'>Create billing account</a></li><li>3.Attach billing account to project</li><li>4.<a target='_blank' href='https://console.developers.google.com/billing/enable'>Enable billing account</a></li><li>5.<a target='_blank' href='https://console.cloud.google.com/marketplace/product/google/texttospeech.googleapis.com'>Enable Text to speach API</a></li><li>6.<a target='_blank' href='https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts/create'>Create service account</a> (Select project to link account to)</li><li>7.Click the Keys tab and press <Add key> button to create key(JSON type)</li><li>8.Clicking Create downloads a service account key file</li><li>9.In the entity context menu select <Upload credentials> and upload saved key file</li></ol>"
+  }
+}
