@@ -55,6 +55,10 @@
   <modelVersion>4.0.0</modelVersion>
   <name>GoogleCloud Text-to-Speech</name>
   <packaging>jar</packaging>
+  
+  <properties>
+    <category>Communication</category>
+  </properties>
 
   <parent>
     <artifactId>addon-parent</artifactId>
