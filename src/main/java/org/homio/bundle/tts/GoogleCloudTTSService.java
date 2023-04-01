@@ -1,4 +1,4 @@
-package org.touchhome.bundle.tts;
+package org.homio.bundle.tts;
 
 import com.google.api.gax.core.CredentialsProvider;
 import com.google.api.gax.core.FixedCredentialsProvider;
@@ -23,8 +23,8 @@ import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
-import org.touchhome.bundle.api.service.EntityService;
-import org.touchhome.bundle.api.service.TextToSpeechEntityService;
+import org.homio.bundle.api.service.EntityService;
+import org.homio.bundle.api.service.TextToSpeechEntityService;
 
 @Log4j2
 public class GoogleCloudTTSService extends TextToSpeechEntityService

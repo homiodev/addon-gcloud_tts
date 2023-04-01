@@ -11,6 +11,7 @@
     <dependency>
       <artifactId>google-cloud-texttospeech</artifactId>
       <groupId>com.google.cloud</groupId>
+      <version>2.15.0</version>
       <exclusions>
         <exclusion>
           <groupId>com.google.protobuf</groupId>
@@ -55,15 +56,15 @@
   <modelVersion>4.0.0</modelVersion>
   <name>GoogleCloud Text-to-Speech</name>
   <packaging>jar</packaging>
-  
+
   <properties>
     <category>Communication</category>
   </properties>
 
   <parent>
     <artifactId>addon-parent</artifactId>
-    <groupId>org.touchhome</groupId>
-    <version>1.2.1</version>
+    <groupId>org.homio</groupId>
+    <version>1.2.3</version>
   </parent>
 
   <version>1.0.1-SNAPSHOT</version>
