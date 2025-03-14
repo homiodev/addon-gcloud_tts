@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 import org.apache.commons.io.IOUtils;
 import org.homio.api.Context;
 import org.homio.api.entity.media.HasTextToSpeech;
-import org.homio.api.entity.types.MiscEntity;
+import org.homio.api.entity.types.MediaEntity;
 import org.homio.api.exception.NotFoundException;
 import org.homio.api.model.ActionResponseModel;
 import org.homio.api.model.OptionModel;
@@ -20,6 +20,7 @@ import org.homio.api.ui.field.UIFieldGroup;
 import org.homio.api.ui.field.UIFieldSlider;
 import org.homio.api.ui.field.UIFieldType;
 import org.homio.api.ui.field.action.UIContextMenuUploadAction;
+import org.homio.api.ui.field.action.v1.UIInputBuilder;
 import org.homio.api.ui.field.selection.UIFieldStaticSelection;
 import org.homio.api.ui.field.selection.dynamic.DynamicOptionLoader;
 import org.homio.api.ui.field.selection.dynamic.UIFieldDynamicSelection;
@@ -39,7 +40,7 @@ import java.util.Set;
 @Entity
 @Accessors(chain = true)
 @UISidebarChildren(icon = "fas fa-comment-dots", color = "#349496")
-public class GoogleCloudTTSEntity extends MiscEntity
+public class GoogleCloudTTSEntity extends MediaEntity
   implements HasTextToSpeech<GoogleCloudTTSService> {
 
   @UIField(order = 1, hideInEdit = true, hideOnEmpty = true, fullWidth = true, bg = "#334842", type = UIFieldType.HTML)
@@ -175,6 +176,11 @@ public class GoogleCloudTTSEntity extends MiscEntity
       return getJsonData("credentials");
     }
     throw new NotFoundException("Unable to find saved service credentials");
+  }
+
+  @Override
+  public void assembleActions(UIInputBuilder uiInputBuilder) {
+
   }
 
   public static class SelectVoice implements DynamicOptionLoader {
