@@ -14,6 +14,6 @@
     "volumeGainDb": "The volume of the output between 16dB and -96dB"
   },
   "SELECTION": {
-    "GoogleCloudTTSEntity": "GoogleCloud Text to Sound"
+    "GoogleCloudTTSEntity": "GoogleCloud Text to Speech"
   }
 }
