@@ -1,7 +1,5 @@
 {
   "field": {
-    "disableTranslateAfterQuota": "Disable on quota reach",
-    "maxCharactersQuota": "Max characters",
     "voice": "Voice",
     "ssmlVoiceGender": "Voice gender",
     "pitch": "Pitch",
@@ -9,14 +7,13 @@
     "volumeGainDb": "Volume Gain Db"
   },
   "help": {
-      "voice": "Preselected voices",
-      "maxCharactersQuota": "Max translate characters for month",
-      "ssmlVoiceGender": "The preferred gender of the voice",
-      "pitch": "The pitch of selected voice, up to 20 semitones",
-      "speakingRate": "The speaking rate can be 4x faster or slower than the normal rate",
-      "volumeGainDb": "The volume of the output between 16dB and -96dB"
+    "voice": "Preselected voices",
+    "ssmlVoiceGender": "The preferred gender of the voice",
+    "pitch": "The pitch of selected voice, up to 20 semitones",
+    "speakingRate": "The speaking rate can be 4x faster or slower than the normal rate",
+    "volumeGainDb": "The volume of the output between 16dB and -96dB"
   },
-  "selection": {
+  "SELECTION": {
     "GoogleCloudTTSEntity": "GoogleCloud Text to Sound"
   }
 }
