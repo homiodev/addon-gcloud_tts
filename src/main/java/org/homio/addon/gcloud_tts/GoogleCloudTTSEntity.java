@@ -9,21 +9,20 @@ import lombok.SneakyThrows;
 import lombok.experimental.Accessors;
 import org.apache.commons.io.IOUtils;
 import org.homio.api.Context;
+import org.homio.api.entity.device.DeviceBaseEntity;
 import org.homio.api.entity.media.HasTextToSpeech;
-import org.homio.api.entity.types.MediaEntity;
 import org.homio.api.exception.NotFoundException;
 import org.homio.api.model.ActionResponseModel;
 import org.homio.api.model.OptionModel;
-import org.homio.api.ui.UISidebarChildren;
 import org.homio.api.ui.field.UIField;
 import org.homio.api.ui.field.UIFieldGroup;
 import org.homio.api.ui.field.UIFieldSlider;
 import org.homio.api.ui.field.UIFieldType;
 import org.homio.api.ui.field.action.UIContextMenuUploadAction;
-import org.homio.api.ui.field.action.v1.UIInputBuilder;
 import org.homio.api.ui.field.selection.UIFieldStaticSelection;
 import org.homio.api.ui.field.selection.dynamic.DynamicOptionLoader;
 import org.homio.api.ui.field.selection.dynamic.UIFieldDynamicSelection;
+import org.homio.api.ui.route.UIRouteMedia;
 import org.homio.api.util.Lang;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -39,8 +38,8 @@ import java.util.Set;
 @Setter
 @Entity
 @Accessors(chain = true)
-@UISidebarChildren(icon = "fas fa-comment-dots", color = "#349496")
-public class GoogleCloudTTSEntity extends MediaEntity
+@UIRouteMedia(icon = "fas fa-comment-dots", color = "#349496")
+public class GoogleCloudTTSEntity extends DeviceBaseEntity
   implements HasTextToSpeech<GoogleCloudTTSService> {
 
   @UIField(order = 1, hideInEdit = true, hideOnEmpty = true, fullWidth = true, bg = "#334842", type = UIFieldType.HTML)
@@ -146,11 +145,6 @@ public class GoogleCloudTTSEntity extends MediaEntity
   }
 
   @Override
-  public @NotNull Class<GoogleCloudTTSService> getEntityServiceItemClass() {
-    return GoogleCloudTTSService.class;
-  }
-
-  @Override
   public GoogleCloudTTSService createService(@NotNull Context context) {
     return new GoogleCloudTTSService(context, this);
   }
@@ -176,11 +170,6 @@ public class GoogleCloudTTSEntity extends MediaEntity
       return getJsonData("credentials");
     }
     throw new NotFoundException("Unable to find saved service credentials");
-  }
-
-  @Override
-  public void assembleActions(UIInputBuilder uiInputBuilder) {
-
   }
 
   public static class SelectVoice implements DynamicOptionLoader {
